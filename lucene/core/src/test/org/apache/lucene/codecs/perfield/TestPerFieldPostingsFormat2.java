@@ -24,6 +24,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.MockAnalyzer;
 import org.apache.lucene.codecs.Codec;
 import org.apache.lucene.codecs.FieldsConsumer;
@@ -326,7 +327,8 @@ public class TestPerFieldPostingsFormat2 extends LuceneTestCase {
     MergeRecordingPostingsFormatWrapper pf1 = new MergeRecordingPostingsFormatWrapper(TestUtil.getDefaultPostingsFormat());
     MergeRecordingPostingsFormatWrapper pf2 = new MergeRecordingPostingsFormatWrapper(TestUtil.getDefaultPostingsFormat());
 
-    IndexWriterConfig iwc = new IndexWriterConfig();
+    Analyzer analyzer = new MockAnalyzer(random());
+    IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
     iwc.setCodec(new AssertingCodec() {
       @Override
       public PostingsFormat getPostingsFormatForField(String field) {

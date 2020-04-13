@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import org.apache.lucene.analysis.MockAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -39,7 +40,7 @@ public class TestIndexTooManyDocs extends LuceneTestCase {
   public void testIndexTooManyDocs() throws IOException, InterruptedException {
     Directory dir = newDirectory();
     int numMaxDoc = 25;
-    IndexWriterConfig config = new IndexWriterConfig();
+    IndexWriterConfig config = new IndexWriterConfig(new MockAnalyzer(random()));
     config.setRAMBufferSizeMB(0.000001); // force lots of small segments and logs of concurrent deletes
     IndexWriter writer = new IndexWriter(dir, config);
     try {

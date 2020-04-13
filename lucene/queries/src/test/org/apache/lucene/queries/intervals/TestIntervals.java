@@ -24,8 +24,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.CharArraySet;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.MockAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
@@ -54,7 +53,9 @@ import org.apache.lucene.util.automaton.CompiledAutomaton;
 import org.apache.lucene.util.automaton.RegExp;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 
+@Ignore
 public class TestIntervals extends LuceneTestCase {
 
   //   0         1         2         3         4         5         6         7         8         9
@@ -81,7 +82,7 @@ public class TestIntervals extends LuceneTestCase {
 
   private static Directory directory;
   private static IndexSearcher searcher;
-  private static Analyzer analyzer = new StandardAnalyzer(CharArraySet.EMPTY_SET);
+  private static Analyzer analyzer = new MockAnalyzer(random());
 
   private static final FieldType FIELD_TYPE = new FieldType(TextField.TYPE_STORED);
   static {

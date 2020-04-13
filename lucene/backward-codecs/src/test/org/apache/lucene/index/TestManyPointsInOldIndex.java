@@ -46,7 +46,8 @@ public class TestManyPointsInOldIndex extends LuceneTestCase {
 
   public static void main(String[] args) throws IOException {
     Directory dir = FSDirectory.open(Paths.get("manypointsindex"));
-    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig());
+    
+    IndexWriter w = new IndexWriter(dir, newIndexWriterConfig());
     for(int i=0;i<1025;i++) {
       Document doc = new Document();
       doc.add(new IntPoint("intpoint", 1025-i));

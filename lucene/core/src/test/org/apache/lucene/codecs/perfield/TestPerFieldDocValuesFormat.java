@@ -143,7 +143,8 @@ public class TestPerFieldDocValuesFormat extends BaseDocValuesFormatTestCase {
     MergeRecordingDocValueFormatWrapper dvf1 = new MergeRecordingDocValueFormatWrapper(TestUtil.getDefaultDocValuesFormat());
     MergeRecordingDocValueFormatWrapper dvf2 = new MergeRecordingDocValueFormatWrapper(TestUtil.getDefaultDocValuesFormat());
 
-    IndexWriterConfig iwc = new IndexWriterConfig();
+    Analyzer analyzer = new MockAnalyzer(random());
+    IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
     iwc.setCodec(new AssertingCodec() {
       @Override
       public DocValuesFormat getDocValuesFormatForField(String field) {
@@ -193,7 +194,8 @@ public class TestPerFieldDocValuesFormat extends BaseDocValuesFormatTestCase {
   public void testDocValuesMergeWithIndexedFields() throws IOException {
     MergeRecordingDocValueFormatWrapper docValuesFormat = new MergeRecordingDocValueFormatWrapper(TestUtil.getDefaultDocValuesFormat());
 
-    IndexWriterConfig iwc = new IndexWriterConfig();
+    Analyzer analyzer = new MockAnalyzer(random());
+    IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
     iwc.setCodec(new AssertingCodec() {
       @Override
       public DocValuesFormat getDocValuesFormatForField(String field) {

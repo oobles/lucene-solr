@@ -20,9 +20,10 @@ package org.apache.lucene;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Random;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.MockAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.DirectoryReader;
@@ -50,7 +51,7 @@ public class TestDemo extends LuceneTestCase {
 
     Path indexPath = Files.createTempDirectory("tempIndex");
     try (Directory dir = FSDirectory.open(indexPath)) {
-      Analyzer analyzer = new StandardAnalyzer();
+      Analyzer analyzer = new MockAnalyzer(new Random());
       try (IndexWriter iw = new IndexWriter(dir, new IndexWriterConfig(analyzer))) {
         Document doc = new Document();
         doc.add(newTextField("fieldname", text, Field.Store.YES));

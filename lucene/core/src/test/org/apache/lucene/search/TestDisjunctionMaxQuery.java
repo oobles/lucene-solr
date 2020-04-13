@@ -27,7 +27,6 @@ import java.util.Locale;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.MockAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
@@ -539,7 +538,8 @@ public class TestDisjunctionMaxQuery extends LuceneTestCase {
   private void doTestRandomTopDocs(int numFields, double... freqs) throws IOException {
     assert numFields == freqs.length;
     Directory dir = newDirectory();
-    IndexWriterConfig config = new IndexWriterConfig(new StandardAnalyzer());
+    Analyzer indexerAnalyzer = new MockAnalyzer(random());
+    IndexWriterConfig config = new IndexWriterConfig(indexerAnalyzer);
     IndexWriter w = new IndexWriter(dir, config);
 
     int numDocs = TEST_NIGHTLY ? atLeast(1000) : atLeast(100); // at night, make sure some terms have skip data

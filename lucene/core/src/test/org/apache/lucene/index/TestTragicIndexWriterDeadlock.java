@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import org.apache.lucene.analysis.MockAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.MockDirectoryWrapper;
@@ -98,7 +99,7 @@ public class TestTragicIndexWriterDeadlock extends LuceneTestCase {
   // LUCENE-7570
   public void testDeadlockStalledMerges() throws Exception {
     Directory dir = newDirectory();
-    IndexWriterConfig iwc = new IndexWriterConfig();
+    IndexWriterConfig iwc = new IndexWriterConfig(new MockAnalyzer(random()));
 
     // so we merge every 2 segments:
     LogMergePolicy mp = new LogDocMergePolicy();

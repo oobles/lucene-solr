@@ -2919,7 +2919,7 @@ public class TestIndexWriter extends LuceneTestCase {
 
   public void testFlushLargestWriter() throws IOException, InterruptedException {
     Directory dir = newDirectory();
-    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig());
+    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig(new MockAnalyzer(random())));
     int numDocs = indexDocsForMultipleDWPTs(w);
     DocumentsWriterPerThread largestNonPendingWriter
         = w.docWriter.flushControl.findLargestNonPendingWriter();
@@ -2973,7 +2973,7 @@ public class TestIndexWriter extends LuceneTestCase {
 
   public void testNeverCheckOutOnFullFlush() throws IOException, InterruptedException {
     Directory dir = newDirectory();
-    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig());
+    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig(new MockAnalyzer(random())));
     indexDocsForMultipleDWPTs(w);
     DocumentsWriterPerThread largestNonPendingWriter
         = w.docWriter.flushControl.findLargestNonPendingWriter();
@@ -2993,7 +2993,7 @@ public class TestIndexWriter extends LuceneTestCase {
 
   public void testHoldLockOnLargestWriter() throws IOException, InterruptedException {
     Directory dir = newDirectory();
-    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig());
+    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig(new MockAnalyzer(random())));
     int numDocs = indexDocsForMultipleDWPTs(w);
     DocumentsWriterPerThread largestNonPendingWriter
         = w.docWriter.flushControl.findLargestNonPendingWriter();
@@ -3056,7 +3056,7 @@ public class TestIndexWriter extends LuceneTestCase {
         }
       }
     });
-    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig()
+    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig(new MockAnalyzer(random()))
         .setCheckPendingFlushUpdate(false)
         .setMaxBufferedDocs(Integer.MAX_VALUE)
         .setRAMBufferSizeMB(IndexWriterConfig.DISABLE_AUTO_FLUSH));
@@ -3664,11 +3664,11 @@ public class TestIndexWriter extends LuceneTestCase {
 
   public void testSetIndexCreatedVersion() throws IOException {
     IllegalArgumentException e = expectThrows(IllegalArgumentException.class,
-        () -> new IndexWriterConfig().setIndexCreatedVersionMajor(Version.LATEST.major+1));
+        () -> new IndexWriterConfig(new MockAnalyzer(random())).setIndexCreatedVersionMajor(Version.LATEST.major+1));
     assertEquals("indexCreatedVersionMajor may not be in the future: current major version is " +
         Version.LATEST.major + ", but got: " + (Version.LATEST.major+1), e.getMessage());
     e = expectThrows(IllegalArgumentException.class,
-        () -> new IndexWriterConfig().setIndexCreatedVersionMajor(Version.LATEST.major-2));
+        () -> new IndexWriterConfig(new MockAnalyzer(random())).setIndexCreatedVersionMajor(Version.LATEST.major-2));
     assertEquals("indexCreatedVersionMajor may not be less than the minimum supported version: " +
         (Version.LATEST.major-1) + ", but got: " + (Version.LATEST.major-2), e.getMessage());
 
@@ -3699,7 +3699,7 @@ public class TestIndexWriter extends LuceneTestCase {
   // see LUCENE-8639
   public void testFlushWhileStartingNewThreads() throws IOException, InterruptedException {
     Directory dir = newDirectory();
-    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig());
+    IndexWriter w = new IndexWriter(dir, new IndexWriterConfig(new MockAnalyzer(random())));
     w.addDocument(new Document());
     assertEquals(1, w.docWriter.perThreadPool.size());
     CountDownLatch latch = new CountDownLatch(1);

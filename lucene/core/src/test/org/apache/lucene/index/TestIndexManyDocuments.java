@@ -20,6 +20,7 @@ package org.apache.lucene.index;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.lucene.analysis.MockAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.store.Directory;
@@ -31,7 +32,7 @@ public class TestIndexManyDocuments extends LuceneTestCase {
 
   public void test() throws Exception {
     Directory dir = newFSDirectory(createTempDir());
-    IndexWriterConfig iwc = new IndexWriterConfig();
+    IndexWriterConfig iwc = new IndexWriterConfig(new MockAnalyzer(random()));
     iwc.setMaxBufferedDocs(TestUtil.nextInt(random(), 100, 2000));
 
     int numDocs = atLeast(10000);
