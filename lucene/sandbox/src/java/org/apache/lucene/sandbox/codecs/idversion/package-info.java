@@ -14,12 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-apply plugin: 'java-library'
-
-dependencies {
-  api project(':lucene:core')
-  api project(':lucene:queries')
-
-  testImplementation project(':lucene:test-framework')
-}
+ 
+/** 
+ * A primary-key postings format that associates a version (long) with each term and
+ * can provide fail-fast lookups by ID and version.
+ */
+package org.apache.lucene.sandbox.codecs.idversion;

@@ -15,11 +15,7 @@
  * limitations under the License.
  */
 
-apply plugin: 'java-library'
-
-dependencies {
-  api project(':lucene:core')
-  api project(':lucene:queries')
-
-  testImplementation project(':lucene:test-framework')
-}
+/**
+ * Experimental classes for interacting with payloads
+ */
+package org.apache.lucene.sandbox.payloads;

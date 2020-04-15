@@ -24,18 +24,16 @@
 
   <path id="classpath">
     <pathelement path="${queries.jar}"/>
-    <pathelement path="${sandbox.jar}"/>
     <path refid="base.classpath"/>
   </path>
 
-  <target name="compile-core" depends="jar-queries,jar-sandbox,common.compile-core"/>
+  <target name="compile-core" depends="jar-queries,common.compile-core"/>
 
-  <target name="javadocs" depends="javadocs-queries,javadocs-sandbox,compile-core,check-javadocs-uptodate"
+  <target name="javadocs" depends="javadocs-queries,compile-core,check-javadocs-uptodate"
           unless="javadocs-uptodate-${name}">
     <invoke-module-javadoc>
       <links>
         <link href="../queries"/>
-        <link href="../sandbox"/>
       </links>
     </invoke-module-javadoc>
   </target>

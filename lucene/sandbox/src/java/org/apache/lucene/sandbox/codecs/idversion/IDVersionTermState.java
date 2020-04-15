@@ -14,12 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.apache.lucene.sandbox.codecs.idversion;
 
-apply plugin: 'java-library'
+import org.apache.lucene.codecs.BlockTermState;
+import org.apache.lucene.index.TermState;
 
-dependencies {
-  api project(':lucene:core')
-  api project(':lucene:queries')
+final class IDVersionTermState extends BlockTermState {
+  long idVersion;
+  int docID;
 
-  testImplementation project(':lucene:test-framework')
+  @Override
+  public IDVersionTermState clone() {
+    IDVersionTermState other = new IDVersionTermState();
+    other.copyFrom(this);
+    return other;
+  }
+
+  @Override
+  public void copyFrom(TermState _other) {
+    super.copyFrom(_other);
+    IDVersionTermState other = (IDVersionTermState) _other;
+    idVersion = other.idVersion;
+    docID = other.docID;
+  }
 }
