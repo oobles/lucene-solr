@@ -19,6 +19,7 @@ package org.apache.lucene.collation;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.collation.tokenattributes.ICUCollatedTermAttributeImpl;
+import org.apache.lucene.common.analysis.collation.CollationAttributeFactory;
 import org.apache.lucene.util.AttributeFactory;
 
 import com.ibm.icu.text.Collator;

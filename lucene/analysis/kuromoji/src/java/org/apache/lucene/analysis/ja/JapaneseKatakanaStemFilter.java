@@ -30,12 +30,12 @@ import java.io.IOException;
  * katakana words longer than a minimum length are stemmed (default is four).
  * <p>
  * Note that only full-width katakana characters are supported.  Please use a
- * {@link org.apache.lucene.analysis.cjk.CJKWidthFilter} to convert half-width
+ * {@link org.apache.lucene.common.analysis.cjk.CJKWidthFilter} to convert half-width
  * katakana to full-width before using this filter.
  * </p>
  * <p>
  * In order to prevent terms from being stemmed, use an instance of
- * {@link org.apache.lucene.analysis.miscellaneous.SetKeywordMarkerFilter}
+ * {@link org.apache.lucene.common.analysis.miscellaneous.SetKeywordMarkerFilter}
  * or a custom {@link TokenFilter} that sets the {@link KeywordAttribute}
  * before this {@link TokenStream}.
  * </p>

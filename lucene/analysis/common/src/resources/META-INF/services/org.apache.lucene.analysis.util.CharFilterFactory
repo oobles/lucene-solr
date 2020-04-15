@@ -13,7 +13,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-org.apache.lucene.analysis.charfilter.HTMLStripCharFilterFactory
-org.apache.lucene.analysis.charfilter.MappingCharFilterFactory
-org.apache.lucene.analysis.fa.PersianCharFilterFactory
-org.apache.lucene.analysis.pattern.PatternReplaceCharFilterFactory
+org.apache.lucene.common.analysis.charfilter.HTMLStripCharFilterFactory
+org.apache.lucene.common.analysis.charfilter.MappingCharFilterFactory
+org.apache.lucene.common.analysis.fa.PersianCharFilterFactory
+org.apache.lucene.common.analysis.pattern.PatternReplaceCharFilterFactory

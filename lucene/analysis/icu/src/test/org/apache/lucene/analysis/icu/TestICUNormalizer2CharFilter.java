@@ -28,7 +28,7 @@ import org.apache.lucene.analysis.CharFilter;
 import org.apache.lucene.analysis.MockTokenizer;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.core.KeywordTokenizer;
-import org.apache.lucene.analysis.ngram.NGramTokenizer;
+import org.apache.lucene.common.analysis.ngram.NGramTokenizer;
 import org.apache.lucene.util.TestUtil;
 
 import com.ibm.icu.text.Normalizer2;

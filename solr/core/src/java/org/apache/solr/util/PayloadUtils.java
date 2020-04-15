@@ -23,11 +23,11 @@ import java.util.List;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.payloads.DelimitedPayloadTokenFilterFactory;
-import org.apache.lucene.analysis.payloads.NumericPayloadTokenFilterFactory;
-import org.apache.lucene.analysis.payloads.PayloadHelper;
 import org.apache.lucene.analysis.tokenattributes.TermToBytesRefAttribute;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
+import org.apache.lucene.common.analysis.payloads.DelimitedPayloadTokenFilterFactory;
+import org.apache.lucene.common.analysis.payloads.NumericPayloadTokenFilterFactory;
+import org.apache.lucene.common.analysis.payloads.PayloadHelper;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queries.payloads.AveragePayloadFunction;
 import org.apache.lucene.queries.payloads.MaxPayloadFunction;

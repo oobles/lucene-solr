@@ -19,9 +19,9 @@ package org.apache.lucene.analysis.opennlp;
 
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
-import org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
 import org.apache.lucene.analysis.util.ClasspathResourceLoader;
+import org.apache.lucene.common.analysis.miscellaneous.KeywordRepeatFilterFactory;
+import org.apache.lucene.common.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory;
 
 public class TestOpenNLPLemmatizerFilterFactory extends BaseTokenStreamTestCase {
 

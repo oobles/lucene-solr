@@ -13,17 +13,13 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-org.apache.lucene.analysis.core.KeywordTokenizerFactory
-org.apache.lucene.analysis.core.LetterTokenizerFactory
-org.apache.lucene.analysis.core.WhitespaceTokenizerFactory
-org.apache.lucene.analysis.ngram.EdgeNGramTokenizerFactory
-org.apache.lucene.analysis.ngram.NGramTokenizerFactory
-org.apache.lucene.analysis.path.PathHierarchyTokenizerFactory
-org.apache.lucene.analysis.pattern.PatternTokenizerFactory
-org.apache.lucene.analysis.pattern.SimplePatternSplitTokenizerFactory
-org.apache.lucene.analysis.pattern.SimplePatternTokenizerFactory
-org.apache.lucene.analysis.standard.ClassicTokenizerFactory
-org.apache.lucene.analysis.standard.StandardTokenizerFactory
-org.apache.lucene.analysis.standard.UAX29URLEmailTokenizerFactory
-org.apache.lucene.analysis.th.ThaiTokenizerFactory
-org.apache.lucene.analysis.wikipedia.WikipediaTokenizerFactory
+org.apache.lucene.common.analysis.email.UAX29URLEmailTokenizerFactory
+org.apache.lucene.common.analysis.ngram.EdgeNGramTokenizerFactory
+org.apache.lucene.common.analysis.ngram.NGramTokenizerFactory
+org.apache.lucene.common.analysis.path.PathHierarchyTokenizerFactory
+org.apache.lucene.common.analysis.pattern.PatternTokenizerFactory
+org.apache.lucene.common.analysis.pattern.SimplePatternSplitTokenizerFactory
+org.apache.lucene.common.analysis.pattern.SimplePatternTokenizerFactory
+org.apache.lucene.common.analysis.classic.ClassicTokenizerFactory
+org.apache.lucene.common.analysis.th.ThaiTokenizerFactory
+org.apache.lucene.common.analysis.wikipedia.WikipediaTokenizerFactory

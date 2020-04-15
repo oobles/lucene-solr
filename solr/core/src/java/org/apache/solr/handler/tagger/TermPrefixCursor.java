@@ -25,7 +25,7 @@ package org.apache.solr.handler.tagger;
 import java.io.IOException;
 import java.util.Map;
 
-import org.apache.lucene.analysis.miscellaneous.ConcatenateGraphFilter;
+import org.apache.lucene.common.analysis.miscellaneous.ConcatenateGraphFilter;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.TermsEnum;
 import org.apache.lucene.util.Bits;

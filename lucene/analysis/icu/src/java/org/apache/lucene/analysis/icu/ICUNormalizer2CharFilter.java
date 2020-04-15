@@ -22,7 +22,7 @@ import java.io.Reader;
 import java.util.Objects;
 
 import org.apache.lucene.analysis.CharacterUtils;
-import org.apache.lucene.analysis.charfilter.BaseCharFilter;
+import org.apache.lucene.common.analysis.charfilter.BaseCharFilter;
 
 import com.ibm.icu.text.Normalizer2;
 

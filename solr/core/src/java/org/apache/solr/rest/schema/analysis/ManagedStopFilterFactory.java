@@ -19,8 +19,8 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.lucene.analysis.CharArraySet;
-import org.apache.lucene.analysis.core.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.common.analysis.core.StopFilter;
 import org.apache.solr.common.SolrException;
 import org.apache.solr.common.util.NamedList;
 import org.apache.solr.rest.ManagedResource;

@@ -22,9 +22,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.classification.ClassificationResult;
 import org.apache.lucene.classification.ClassificationTestBase;
+import org.apache.lucene.common.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexReader;

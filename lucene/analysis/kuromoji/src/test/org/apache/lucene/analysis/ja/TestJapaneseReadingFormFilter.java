@@ -21,8 +21,8 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.analysis.cjk.CJKWidthFilter;
 import org.apache.lucene.analysis.core.KeywordTokenizer;
+import org.apache.lucene.common.analysis.cjk.CJKWidthFilter;
 import org.apache.lucene.util.IOUtils;
 
 import java.io.IOException;

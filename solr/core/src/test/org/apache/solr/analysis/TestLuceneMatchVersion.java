@@ -21,7 +21,7 @@ import org.apache.solr.core.SolrConfig;
 import org.apache.solr.schema.IndexSchema;
 import org.apache.solr.schema.FieldType;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.tr.TurkishAnalyzer;
+import org.apache.lucene.common.analysis.tr.TurkishAnalyzer;
 import org.apache.lucene.util.Version;
 import org.junit.BeforeClass;
 

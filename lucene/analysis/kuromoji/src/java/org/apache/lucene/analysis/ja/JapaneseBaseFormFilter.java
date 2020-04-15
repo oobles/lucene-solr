@@ -22,9 +22,9 @@ import java.io.IOException;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.ja.tokenattributes.BaseFormAttribute;
-import org.apache.lucene.analysis.miscellaneous.SetKeywordMarkerFilter;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.KeywordAttribute;
+import org.apache.lucene.common.analysis.miscellaneous.SetKeywordMarkerFilter;
 
 /**
  * Replaces term text with the {@link BaseFormAttribute}.

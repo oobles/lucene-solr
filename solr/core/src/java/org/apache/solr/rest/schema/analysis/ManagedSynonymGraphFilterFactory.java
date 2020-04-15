@@ -29,9 +29,9 @@ import java.util.TreeSet;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.synonym.SynonymGraphFilterFactory;
-import org.apache.lucene.analysis.synonym.SynonymMap;
 import org.apache.lucene.analysis.util.ResourceLoader;
+import org.apache.lucene.common.analysis.synonym.SynonymGraphFilterFactory;
+import org.apache.lucene.common.analysis.synonym.SynonymMap;
 import org.apache.lucene.util.CharsRef;
 import org.apache.lucene.util.CharsRefBuilder;
 import org.apache.solr.common.SolrException;

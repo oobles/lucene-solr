@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.apache.lucene.analysis.core.KeywordTokenizerFactory;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
-import org.apache.lucene.analysis.pattern.PatternReplaceFilterFactory;
+import org.apache.lucene.common.analysis.pattern.PatternReplaceFilterFactory;
 import org.apache.solr.analysis.TokenizerChain;
 import org.apache.solr.common.SolrException;
 

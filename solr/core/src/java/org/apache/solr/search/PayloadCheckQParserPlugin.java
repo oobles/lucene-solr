@@ -23,10 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.payloads.FloatEncoder;
-import org.apache.lucene.analysis.payloads.IdentityEncoder;
-import org.apache.lucene.analysis.payloads.IntegerEncoder;
-import org.apache.lucene.analysis.payloads.PayloadEncoder;
+import org.apache.lucene.common.analysis.payloads.FloatEncoder;
+import org.apache.lucene.common.analysis.payloads.IdentityEncoder;
+import org.apache.lucene.common.analysis.payloads.IntegerEncoder;
+import org.apache.lucene.common.analysis.payloads.PayloadEncoder;
 import org.apache.lucene.queries.payloads.SpanPayloadCheckQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.spans.SpanQuery;

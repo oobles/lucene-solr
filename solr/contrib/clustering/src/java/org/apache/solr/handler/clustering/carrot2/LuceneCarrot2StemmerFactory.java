@@ -21,8 +21,8 @@ import java.lang.invoke.MethodHandles;
 import java.nio.CharBuffer;
 import java.util.HashMap;
 
-import org.apache.lucene.analysis.ar.ArabicNormalizer;
-import org.apache.lucene.analysis.ar.ArabicStemmer;
+import org.apache.lucene.common.analysis.ar.ArabicNormalizer;
+import org.apache.lucene.common.analysis.ar.ArabicStemmer;
 import org.carrot2.core.LanguageCode;
 import org.carrot2.text.linguistic.IStemmer;
 import org.carrot2.text.linguistic.IStemmerFactory;
@@ -179,14 +179,14 @@ public class LuceneCarrot2StemmerFactory implements IStemmerFactory {
      * Adapter to lucene-contrib Arabic analyzers.
      */
     private static class LuceneStemmerAdapter implements IStemmer {
-      private final org.apache.lucene.analysis.ar.ArabicStemmer delegate;
-      private final org.apache.lucene.analysis.ar.ArabicNormalizer normalizer;
+      private final org.apache.lucene.common.analysis.ar.ArabicStemmer delegate;
+      private final org.apache.lucene.common.analysis.ar.ArabicNormalizer normalizer;
 
       private char[] buffer = new char[0];
 
       private LuceneStemmerAdapter() {
-        delegate = new org.apache.lucene.analysis.ar.ArabicStemmer();
-        normalizer = new org.apache.lucene.analysis.ar.ArabicNormalizer();
+        delegate = new org.apache.lucene.common.analysis.ar.ArabicStemmer();
+        normalizer = new org.apache.lucene.common.analysis.ar.ArabicNormalizer();
       }
 
       @Override

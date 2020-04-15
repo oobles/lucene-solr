@@ -19,8 +19,10 @@ package org.apache.lucene.collation;
 
 
 import com.ibm.icu.text.Collator;
+
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.KeywordTokenizer;
+import org.apache.lucene.common.analysis.collation.CollationKeyAnalyzer;
 
 /**
  * <p>

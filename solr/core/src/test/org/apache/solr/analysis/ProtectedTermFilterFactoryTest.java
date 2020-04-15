@@ -22,8 +22,8 @@ import java.util.Map;
 
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.miscellaneous.ProtectedTermFilterFactory;
 import org.apache.lucene.analysis.util.ResourceLoader;
+import org.apache.lucene.common.analysis.miscellaneous.ProtectedTermFilterFactory;
 import org.apache.solr.SolrTestCaseJ4;
 import org.apache.solr.core.SolrResourceLoader;
 import org.junit.BeforeClass;

@@ -35,7 +35,7 @@ import org.apache.lucene.benchmark.byTask.feeds.DocMaker;
 import org.apache.lucene.benchmark.byTask.stats.TaskStats;
 import org.apache.lucene.benchmark.byTask.tasks.CountingSearchTestTask;
 import org.apache.lucene.benchmark.byTask.tasks.WriteLineDocTask;
-import org.apache.lucene.collation.CollationKeyAnalyzer;
+import org.apache.lucene.common.analysis.collation.CollationKeyAnalyzer;
 import org.apache.lucene.facet.taxonomy.TaxonomyReader;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.FieldInfos;

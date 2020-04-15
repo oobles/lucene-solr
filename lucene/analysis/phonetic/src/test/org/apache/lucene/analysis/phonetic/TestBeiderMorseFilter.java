@@ -32,8 +32,8 @@ import org.apache.lucene.analysis.MockTokenizer;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.core.KeywordTokenizer;
-import org.apache.lucene.analysis.miscellaneous.PatternKeywordMarkerFilter;
 import org.apache.lucene.analysis.tokenattributes.KeywordAttribute;
+import org.apache.lucene.common.analysis.miscellaneous.PatternKeywordMarkerFilter;
 
 /** Tests {@link BeiderMorseFilter} */
 public class TestBeiderMorseFilter extends BaseTokenStreamTestCase {

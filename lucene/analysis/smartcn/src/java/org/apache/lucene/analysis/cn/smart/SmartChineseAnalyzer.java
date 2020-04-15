@@ -27,7 +27,7 @@ import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.WordlistLoader;
-import org.apache.lucene.analysis.en.PorterStemFilter;
+import org.apache.lucene.common.analysis.en.PorterStemFilter;
 import org.apache.lucene.util.IOUtils;
 
 /**

@@ -22,8 +22,8 @@ import java.util.Arrays;
 
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.custom.CustomAnalyzer;
-import org.apache.lucene.analysis.payloads.TypeAsPayloadTokenFilterFactory;
 import org.apache.lucene.analysis.util.ClasspathResourceLoader;
+import org.apache.lucene.common.analysis.payloads.TypeAsPayloadTokenFilterFactory;
 
 /**
  * Needs the OpenNLP Tokenizer because it creates full streams of punctuation.

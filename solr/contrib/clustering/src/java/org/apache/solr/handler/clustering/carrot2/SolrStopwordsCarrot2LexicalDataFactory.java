@@ -23,9 +23,9 @@ import java.util.Set;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.CharArraySet;
-import org.apache.lucene.analysis.commongrams.CommonGramsFilterFactory;
-import org.apache.lucene.analysis.core.StopFilterFactory;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
+import org.apache.lucene.common.analysis.commongrams.CommonGramsFilterFactory;
+import org.apache.lucene.common.analysis.core.StopFilterFactory;
 import org.apache.solr.analysis.TokenizerChain;
 import org.apache.solr.core.SolrCore;
 import org.apache.solr.schema.IndexSchema;

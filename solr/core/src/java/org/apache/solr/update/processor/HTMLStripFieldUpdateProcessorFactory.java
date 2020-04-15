@@ -22,7 +22,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.lucene.analysis.charfilter.HTMLStripCharFilter;
+import org.apache.lucene.common.analysis.charfilter.HTMLStripCharFilter;
 import org.apache.solr.core.SolrCore;
 import org.apache.solr.request.SolrQueryRequest;
 import org.apache.solr.response.SolrQueryResponse;

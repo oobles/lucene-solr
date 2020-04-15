@@ -30,11 +30,11 @@ import org.apache.lucene.analysis.StopwordAnalyzerBase;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.WordlistLoader;
-import org.apache.lucene.analysis.charfilter.MappingCharFilter;
-import org.apache.lucene.analysis.charfilter.NormalizeCharMap;
-import org.apache.lucene.analysis.miscellaneous.SetKeywordMarkerFilter;
 import org.apache.lucene.analysis.morfologik.MorfologikFilter;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
+import org.apache.lucene.common.analysis.charfilter.MappingCharFilter;
+import org.apache.lucene.common.analysis.charfilter.NormalizeCharMap;
+import org.apache.lucene.common.analysis.miscellaneous.SetKeywordMarkerFilter;
 import org.apache.lucene.util.IOUtils;
 
 /**

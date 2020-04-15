@@ -19,7 +19,7 @@ package org.apache.lucene.search.suggest.document;
 import java.io.IOException;
 import java.util.PriorityQueue;
 
-import org.apache.lucene.analysis.miscellaneous.ConcatenateGraphFilter;
+import org.apache.lucene.common.analysis.miscellaneous.ConcatenateGraphFilter;
 import org.apache.lucene.store.DataOutput;
 import org.apache.lucene.store.IndexInput;
 import org.apache.lucene.util.BytesRef;

@@ -16,7 +16,7 @@
  */
 package org.apache.solr.search.grouping.distributed.requestfactory;
 
-import org.apache.lucene.analysis.reverse.ReverseStringFilter;
+import org.apache.lucene.common.analysis.reverse.ReverseStringFilter;
 import org.apache.lucene.search.grouping.SearchGroup;
 import org.apache.lucene.util.BytesRef;
 import org.apache.lucene.util.CharsRefBuilder;

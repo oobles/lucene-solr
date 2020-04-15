@@ -19,8 +19,8 @@ package org.apache.solr.analysis;
 import java.util.Collections;
 
 import org.apache.lucene.analysis.core.LowerCaseFilterFactory;
-import org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
+import org.apache.lucene.common.analysis.miscellaneous.ASCIIFoldingFilterFactory;
 import org.apache.lucene.util.BytesRef;
 import org.apache.solr.SolrTestCaseJ4;
 import org.junit.Test;

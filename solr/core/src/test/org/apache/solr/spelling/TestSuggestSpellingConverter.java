@@ -28,8 +28,8 @@ import org.apache.lucene.analysis.MockTokenizer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.core.KeywordTokenizer;
-import org.apache.lucene.analysis.miscellaneous.TrimFilter;
-import org.apache.lucene.analysis.pattern.PatternReplaceFilter;
+import org.apache.lucene.common.analysis.miscellaneous.TrimFilter;
+import org.apache.lucene.common.analysis.pattern.PatternReplaceFilter;
 
 public class TestSuggestSpellingConverter extends BaseTokenStreamTestCase {
   SuggestQueryConverter converter = new SuggestQueryConverter();

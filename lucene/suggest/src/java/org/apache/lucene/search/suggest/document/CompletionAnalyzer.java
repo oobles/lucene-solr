@@ -19,7 +19,7 @@ package org.apache.lucene.search.suggest.document;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.AnalyzerWrapper;
 import org.apache.lucene.analysis.TokenStreamToAutomaton;
-import org.apache.lucene.analysis.miscellaneous.ConcatenateGraphFilter;
+import org.apache.lucene.common.analysis.miscellaneous.ConcatenateGraphFilter;
 
 /**
  * Wraps an {@link org.apache.lucene.analysis.Analyzer}

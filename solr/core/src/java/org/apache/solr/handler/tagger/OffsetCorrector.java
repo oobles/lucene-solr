@@ -121,7 +121,7 @@ public abstract class OffsetCorrector {
    *   foo&lt;/tag&gt;
    * </pre>
    * and this method pulls the end offset left to the '&lt;'. This is necessary for use with
-   * {@link org.apache.lucene.analysis.charfilter.HTMLStripCharFilter}.
+   * {@link org.apache.lucene.common.analysis.charfilter.HTMLStripCharFilter}.
    *
    * See https://issues.apache.org/jira/browse/LUCENE-5734 */
   protected int correctEndOffsetForCloseElement(int endOffset) {
