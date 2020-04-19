@@ -30,6 +30,21 @@ public class StopFilter extends FilteringTokenFilter {
   private final CharArraySet stopWords;
   private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
   
+  /** An unmodifiable set containing some common English words that are not usually useful
+  for searching.*/
+ public static final CharArraySet ENGLISH_STOP_WORDS_SET;
+
+ static {
+   final List<String> stopWords = Arrays.asList(
+       "a", "an", "and", "are", "as", "at", "be", "but", "by",
+       "for", "if", "in", "into", "is", "it",
+       "no", "not", "of", "on", "or", "such",
+       "that", "the", "their", "then", "there", "these",
+       "they", "this", "to", "was", "will", "with"
+   );
+   final CharArraySet stopSet = new CharArraySet(stopWords, false);
+   ENGLISH_STOP_WORDS_SET = CharArraySet.unmodifiableSet(stopSet);
+ }
   /**
    * Constructs a filter which removes words from the input TokenStream that are
    * named in the Set.

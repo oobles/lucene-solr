@@ -25,7 +25,6 @@ import java.util.Set;
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 
@@ -38,11 +37,11 @@ public class TestStopAnalyzer extends BaseTokenStreamTestCase {
   public void setUp() throws Exception {
     super.setUp();
     
-    Iterator<?> it = EnglishAnalyzer.ENGLISH_STOP_WORDS_SET.iterator();
+    Iterator<?> it = StopFilter.ENGLISH_STOP_WORDS_SET.iterator();
     while(it.hasNext()) {
       inValidTokens.add(it.next());
     }
-    stop = new StopAnalyzer(EnglishAnalyzer.ENGLISH_STOP_WORDS_SET);
+    stop = new StopAnalyzer(StopFilter.ENGLISH_STOP_WORDS_SET);
   }
   
   @Override
