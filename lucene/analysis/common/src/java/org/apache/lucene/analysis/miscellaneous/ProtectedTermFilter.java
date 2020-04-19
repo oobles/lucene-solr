@@ -21,6 +21,7 @@ import java.util.function.Function;
 
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.core.ConditionalTokenFilter;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 
 /**

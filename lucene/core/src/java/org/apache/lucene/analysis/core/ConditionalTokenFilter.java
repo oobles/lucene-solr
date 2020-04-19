@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.apache.lucene.analysis.miscellaneous;
+package org.apache.lucene.analysis.core;
 
 import java.io.IOException;
 import java.util.function.Function;

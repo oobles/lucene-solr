@@ -74,7 +74,6 @@ import org.apache.lucene.analysis.hunspell.Dictionary;
 import org.apache.lucene.analysis.hunspell.TestHunspellStemFilter;
 import org.apache.lucene.analysis.minhash.MinHashFilter;
 import org.apache.lucene.analysis.miscellaneous.ConcatenateGraphFilter;
-import org.apache.lucene.analysis.miscellaneous.ConditionalTokenFilter;
 import org.apache.lucene.analysis.miscellaneous.DelimitedTermFrequencyTokenFilter;
 import org.apache.lucene.analysis.miscellaneous.FingerprintFilter;
 import org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilter;

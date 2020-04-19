@@ -23,7 +23,6 @@ import java.util.List;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.synonym.SynonymGraphFilter;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionLengthAttribute;
@@ -32,7 +31,7 @@ import org.apache.lucene.util.RollingBuffer;
 
 /**
  * Converts an incoming graph token stream, such as one from
- * {@link SynonymGraphFilter}, into a flat form so that
+ * SynonymGraphFilter, into a flat form so that
  * all nodes form a single linear chain with no side paths.  Every
  * path through the graph touches every node.  This is necessary
  * when indexing a graph token stream, because the index does not

@@ -30,6 +30,8 @@ import java.util.function.Predicate; // javadocs
 
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.core.ConditionalTokenFilter;
+import org.apache.lucene.analysis.core.ConditionalTokenFilterFactory;
 import org.apache.lucene.analysis.util.ResourceLoader;
 import org.apache.lucene.analysis.util.ResourceLoaderAware;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
