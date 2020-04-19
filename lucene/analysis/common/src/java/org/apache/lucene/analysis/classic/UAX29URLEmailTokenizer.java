@@ -15,12 +15,14 @@
  * limitations under the License.
  */
 
-package org.apache.lucene.analysis.standard;
+package org.apache.lucene.analysis.classic;
 
 
 import java.io.IOException;
 
 import org.apache.lucene.analysis.Tokenizer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
