@@ -28,7 +28,6 @@ import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.core.KeywordTokenizer;
-import org.apache.lucene.analysis.fr.FrenchAnalyzer;
 import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 
@@ -66,7 +65,7 @@ public class TestElision extends BaseTokenStreamTestCase {
       @Override
       protected TokenStreamComponents createComponents(String fieldName) {
         Tokenizer tokenizer = new KeywordTokenizer();
-        return new TokenStreamComponents(tokenizer, new ElisionFilter(tokenizer, FrenchAnalyzer.DEFAULT_ARTICLES));
+        return new TokenStreamComponents(tokenizer, new ElisionFilter(tokenizer, ElisionFilter.DEFAULT_ARTICLES));
       }
     };
     checkOneTerm(a, "", "");
