@@ -21,9 +21,9 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.apache.lucene.analysis.CharArraySet;
+import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.analysis.util.ResourceLoader;
 import org.apache.lucene.analysis.util.ResourceLoaderAware;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
@@ -77,7 +77,7 @@ public class CommonGramsFilterFactory extends TokenFilterFactory implements Reso
         commonWords = getWordSet(loader, commonWordFiles, ignoreCase);
       }
     } else {
-      commonWords = EnglishAnalyzer.ENGLISH_STOP_WORDS_SET;
+      commonWords = StopFilter.ENGLISH_STOP_WORDS_SET;
     }
   }
 

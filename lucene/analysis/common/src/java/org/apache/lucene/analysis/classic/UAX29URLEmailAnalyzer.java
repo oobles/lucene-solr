@@ -44,7 +44,7 @@ public final class UAX29URLEmailAnalyzer extends StopwordAnalyzerBase {
 
   /** An unmodifiable set containing some common English words that are usually not
   useful for searching. */
-  public static final CharArraySet STOP_WORDS_SET = EnglishAnalyzer.ENGLISH_STOP_WORDS_SET;
+  public static final CharArraySet STOP_WORDS_SET = StopFilter.ENGLISH_STOP_WORDS_SET;
 
   /** Builds an analyzer with the given stop words.
    * @param stopWords stop words */

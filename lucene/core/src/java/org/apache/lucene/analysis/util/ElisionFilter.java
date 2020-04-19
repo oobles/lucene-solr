@@ -18,6 +18,7 @@ package org.apache.lucene.analysis.util;
 
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenFilter;
@@ -34,6 +35,11 @@ public final class ElisionFilter extends TokenFilter {
   private final CharArraySet articles;
   private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
   
+  /** Default set of articles for ElisionFilter */
+  public static final CharArraySet DEFAULT_ARTICLES = CharArraySet.unmodifiableSet(
+      new CharArraySet(Arrays.asList(
+          "l", "m", "t", "qu", "n", "s", "j", "d", "c", "jusqu", "quoiqu", "lorsqu", "puisqu"), true));
+
   /**
    * Constructs an elision filter with a Set of stop words
    * @param input the source {@link TokenStream}

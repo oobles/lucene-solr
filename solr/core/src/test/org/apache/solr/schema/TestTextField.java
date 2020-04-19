@@ -17,9 +17,9 @@
 
 package org.apache.solr.schema;
 
+import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.core.StopAnalyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.util.BytesRef;
 import org.apache.solr.SolrTestCaseJ4;
 import org.apache.solr.common.SolrException;
@@ -34,7 +34,7 @@ public class TestTextField extends SolrTestCaseJ4 {
   public void testAnalyzeMultiTerm() {
     // No terms provided by the StopFilter (stop word) for the multi-term part.
     // This is supported. Check TextField.analyzeMultiTerm returns null (and does not throw an exception).
-    BytesRef termBytes = TextField.analyzeMultiTerm("field", "the", new StopAnalyzer(EnglishAnalyzer.ENGLISH_STOP_WORDS_SET));
+    BytesRef termBytes = TextField.analyzeMultiTerm("field", "the", new StopAnalyzer(StopFilter.ENGLISH_STOP_WORDS_SET));
     assertNull(termBytes);
 
     // One term provided by the WhitespaceTokenizer for the multi-term part.

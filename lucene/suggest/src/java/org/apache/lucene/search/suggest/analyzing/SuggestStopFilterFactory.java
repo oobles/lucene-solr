@@ -20,9 +20,9 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.apache.lucene.analysis.CharArraySet;
+import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.WordlistLoader;
-import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.analysis.util.ResourceLoader;
 import org.apache.lucene.analysis.util.ResourceLoaderAware;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
@@ -47,7 +47,7 @@ import org.apache.lucene.analysis.util.TokenFilterFactory;
  * <ul>
  *  <li><code>ignoreCase</code> defaults to <code>false</code></li>
  *  <li><code>words</code> should be the name of a stopwords file to parse, if not 
- *      specified the factory will use {@link EnglishAnalyzer#ENGLISH_STOP_WORDS_SET}
+ *      specified the factory will use {@link StopFilter#ENGLISH_STOP_WORDS_SET}
  *  </li>
  *  <li><code>format</code> defines how the <code>words</code> file will be parsed, 
  *      and defaults to <code>wordset</code>.  If <code>words</code> is not specified, 
@@ -118,7 +118,7 @@ public class SuggestStopFilterFactory extends TokenFilterFactory implements Reso
       if (null != format) {
         throw new IllegalArgumentException("'format' can not be specified w/o an explicit 'words' file: " + format);
       }
-      stopWords = new CharArraySet(EnglishAnalyzer.ENGLISH_STOP_WORDS_SET, ignoreCase);
+      stopWords = new CharArraySet(StopFilter.ENGLISH_STOP_WORDS_SET, ignoreCase);
     }
   }
 

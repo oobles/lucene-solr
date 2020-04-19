@@ -22,7 +22,6 @@ import java.util.Map;
 
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.fr.FrenchAnalyzer;
 
 /**
  * Factory for {@link ElisionFilter}.
@@ -47,6 +46,8 @@ public class ElisionFilterFactory extends TokenFilterFactory implements Resource
   private final String articlesFile;
   private final boolean ignoreCase;
   private CharArraySet articles;
+  
+
 
   /** Creates a new ElisionFilterFactory */
   public ElisionFilterFactory(Map<String,String> args) {
@@ -66,7 +67,7 @@ public class ElisionFilterFactory extends TokenFilterFactory implements Resource
   @Override
   public void inform(ResourceLoader loader) throws IOException {
     if (articlesFile == null) {
-      articles = FrenchAnalyzer.DEFAULT_ARTICLES;
+      articles = ElisionFilter.DEFAULT_ARTICLES;
     } else {
       articles = getWordSet(loader, articlesFile, ignoreCase);
     }

@@ -20,7 +20,6 @@ package org.apache.lucene.analysis.fr;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.CharArraySet;
@@ -57,11 +56,6 @@ public final class FrenchAnalyzer extends StopwordAnalyzerBase {
   /** File containing default French stopwords. */
   public final static String DEFAULT_STOPWORD_FILE = "french_stop.txt";
   
-  /** Default set of articles for ElisionFilter */
-  public static final CharArraySet DEFAULT_ARTICLES = CharArraySet.unmodifiableSet(
-      new CharArraySet(Arrays.asList(
-          "l", "m", "t", "qu", "n", "s", "j", "d", "c", "jusqu", "quoiqu", "lorsqu", "puisqu"), true));
-
   /**
    * Contains words that should be indexed but not stemmed.
    */
@@ -136,7 +130,7 @@ public final class FrenchAnalyzer extends StopwordAnalyzerBase {
   @Override
   protected TokenStreamComponents createComponents(String fieldName) {
     final Tokenizer source = new StandardTokenizer();
-    TokenStream result = new ElisionFilter(source, DEFAULT_ARTICLES);
+    TokenStream result = new ElisionFilter(source, ElisionFilter.DEFAULT_ARTICLES);
     result = new LowerCaseFilter(result);
     result = new StopFilter(result, stopwords);
     if(!excltable.isEmpty())
@@ -147,7 +141,7 @@ public final class FrenchAnalyzer extends StopwordAnalyzerBase {
 
   @Override
   protected TokenStream normalize(String fieldName, TokenStream in) {
-    TokenStream result = new ElisionFilter(in, DEFAULT_ARTICLES);
+    TokenStream result = new ElisionFilter(in, ElisionFilter.DEFAULT_ARTICLES);
     result = new LowerCaseFilter(result);
     return result;
   }
