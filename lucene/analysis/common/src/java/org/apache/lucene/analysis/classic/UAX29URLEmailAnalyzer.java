@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.lucene.analysis.standard;
+package org.apache.lucene.analysis.classic;
 
 
 import java.io.IOException;
@@ -26,9 +26,10 @@ import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.StopwordAnalyzerBase;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 
 /**
- * Filters {@link org.apache.lucene.analysis.standard.UAX29URLEmailTokenizer}
+ * Filters {@link org.apache.lucene.analysis.classic.UAX29URLEmailTokenizer}
  * with {@link org.apache.lucene.analysis.LowerCaseFilter} and
  * {@link org.apache.lucene.analysis.StopFilter}, using a list of
  * English stop words.

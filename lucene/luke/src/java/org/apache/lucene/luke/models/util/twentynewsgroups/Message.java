@@ -22,9 +22,9 @@ import java.util.Map;
 import java.util.Objects;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.classic.UAX29URLEmailAnalyzer;
 import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.analysis.standard.UAX29URLEmailAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
